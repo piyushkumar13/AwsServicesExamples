@@ -7,6 +7,7 @@
     <groupId>com.practice.piyush</groupId>
     <artifactId>awspractice</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <properties>
         <aws.sdk.version>1.6.11</aws.sdk.version>
