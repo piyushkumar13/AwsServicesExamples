@@ -39,6 +39,8 @@ public class SQSExample {
         receiveMessageRequest.setQueueUrl(QUEUEURL);
         //This wait time seconds is used for long polling. It will wait for 20 seconds till it doesn't get any message.
         receiveMessageRequest.setWaitTimeSeconds(20);
+        //We can also set how many messages we want to receive at a time using following command
+        receiveMessageRequest.setMaxNumberOfMessages(2);
         ReceiveMessageResult receiveMessageResult = sqsClient.receiveMessage(receiveMessageRequest);
         System.out.println("The recieved message result is ::" + receiveMessageResult);
         for (Message message : receiveMessageResult.getMessages()) {
