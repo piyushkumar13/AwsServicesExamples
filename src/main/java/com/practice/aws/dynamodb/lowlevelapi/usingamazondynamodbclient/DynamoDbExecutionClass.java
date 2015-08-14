@@ -1,4 +1,4 @@
-package com.practice.aws.dynamodb;
+package com.practice.aws.dynamodb.lowlevelapi.usingamazondynamodbclient;
 
 public class DynamoDbExecutionClass {
 

@@ -1,4 +1,4 @@
-package com.practice.aws.dynamodb;
+package com.practice.aws.dynamodb.lowlevelapi.usingamazondynamodbclient;
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
 import com.amazonaws.services.dynamodbv2.model.*;
@@ -152,5 +152,4 @@ public class DynamoDbExample {
             System.out.println("the query result is :::" + queryResult.getItems());
         }
     }
-
 }
