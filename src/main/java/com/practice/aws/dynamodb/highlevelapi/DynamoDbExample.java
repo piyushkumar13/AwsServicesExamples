@@ -24,9 +24,12 @@ import static java.util.Arrays.asList;
  * There are so many other methods which I havent presented here like batchWrite(..) which can save as well as delete objects
  * simultaneously in one or more table in single call. Though, internally it may uses several calls.
  * <p>
- * DynamoDDMapper.marshallIntoObjects(...) is used for marshalling the item(got from using low level api) into the your object
- * annotated with the proper dynamo db high level annotations.
+ * DynamoDDMapper.marshallIntoObjects(...) is used for marshalling the item(got from using low level api) into the your complex
+ * object annotated with the proper dynamo db high level annotations.
  * </p>
+ * @DynamoDbMarshaller used for marshalling the complex object to the data types which dynamodb supports and vice versa.
+ * For this, we also require to write a convertor class which implements DynamoDBMarshaller interface and provide its
+ * implementation for marshalling and unmarshalling of your complex object.
  */
 public class DynamoDbExample {
 
