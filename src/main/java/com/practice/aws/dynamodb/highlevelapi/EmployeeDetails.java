@@ -48,4 +48,14 @@ public class EmployeeDetails {
     public void setCompanyLocation(String companyLocation) {
         this.companyLocation = companyLocation;
     }
+
+    @Override
+    public String toString() {
+        return "EmployeeDetails{" +
+                "emailId='" + emailId + '\'' +
+                ", empName='" + empName + '\'' +
+                ", company='" + company + '\'' +
+                ", companyLocation='" + companyLocation + '\'' +
+                '}';
+    }
 }

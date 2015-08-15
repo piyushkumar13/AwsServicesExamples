@@ -1,8 +1,8 @@
 package com.practice.aws.dynamodb.lowlevelapi.usingamazondynamodbclient;
 
+import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
 import com.amazonaws.services.dynamodbv2.model.*;
-import com.practice.aws.AwsCredentialProvider;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,8 +14,8 @@ public class DynamoDbExample {
     private AmazonDynamoDBClient amazonDynamoDBClient;
     private static final String TABLENAME = "PiyushTable";
 
-    public DynamoDbExample() {
-        this.amazonDynamoDBClient = new AmazonDynamoDBClient(new AwsCredentialProvider().getAWSCredentials());
+    public DynamoDbExample(AWSCredentials awsCredentials) {
+        this.amazonDynamoDBClient = new AmazonDynamoDBClient(awsCredentials);
     }
 
     /**
