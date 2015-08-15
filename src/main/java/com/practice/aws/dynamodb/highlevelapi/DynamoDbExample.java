@@ -19,8 +19,14 @@ import static java.util.Arrays.asList;
  * database tables that store those objects data. This high level api actually does the object persistence mapping. This
  * allows us to write the object centric code rather than the database centric code. Using high level api, we can avoid
  * extra code we need to write using low level api for putting, getting, updating item etc.
- * Using high level api provide us operations like saving updating and deleting(DML operations) but using this we cant
+ * Using high level api provide us operations like saving updating and deleting(DML operations) but using this, we cant
  * create table, delete table or alter it(DDL operations).
+ * There are so many other methods which I havent presented here like batchWrite(..) which can save as well as delete objects
+ * simultaneously in one or more table in single call. Though, internally it may uses several calls.
+ * <p>
+ * DynamoDDMapper.marshallIntoObjects(...) is used for marshalling the item(got from using low level api) into the your object
+ * annotated with the proper dynamo db high level annotations.
+ * </p>
  */
 public class DynamoDbExample {
 
